@@ -37,7 +37,7 @@
             This code was returned when the booking has an invalid properties.
             </response>
             <response code="409">
-            This code was returned when the booking id already exists.
+            This code was returned when the booking already exists.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
@@ -125,6 +125,9 @@
             <response code="404">
             This code was returned when the booking was not found.
             </response>
+            <response code="409">
+            This code was returned when already exists a booking with same key properties.
+            </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
             </response>
@@ -172,7 +175,7 @@
             This code was returned when the country has an invalid properties.
             </response>
             <response code="409">
-            This code was returned when the country id already exists.
+            This code was returned when the country already exists.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
@@ -248,6 +251,9 @@
             <response code="404">
             This code was returned when the country was not found.
             </response>
+            <response code="409">
+            This code was returned when already exists a country with same key properties.
+            </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
             </response>
@@ -285,7 +291,7 @@
             This code was returned when the document type has an invalid properties.
             </response>
             <response code="409">
-            This code was returned when the document type id already exists.
+            This code was returned when the document type already exists.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
@@ -361,6 +367,9 @@
             <response code="404">
             This code was returned when the document type was not found.
             </response>
+            <response code="409">
+            This code was returned when already exists a document type with same key properties.
+            </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
             </response>
@@ -398,7 +407,7 @@
             This code was returned when the gender has an invalid properties.
             </response>
             <response code="409">
-            This code was returned when the gender id already exists.
+            This code was returned when the gender already exists.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
@@ -474,6 +483,9 @@
             <response code="404">
             This code was returned when the gender was not found.
             </response>
+            <response code="409">
+            This code was returned when already exists a gender with same key properties.
+            </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
             </response>
@@ -511,7 +523,7 @@
             This code was returned when the guest has an invalid properties.
             </response>
             <response code="409">
-            This code was returned when the guest id already exists.
+            This code was returned when the guest already exists.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
@@ -586,6 +598,9 @@
             </response>
             <response code="404">
             This code was returned when the guest was not found.
+            </response>
+            <response code="409">
+            This code was returned when already exists a guests with same key properties.
             </response>
             <response code="500">
             This code was returned when an internal server error was thrown.
