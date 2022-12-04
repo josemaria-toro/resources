@@ -1,0 +1,595 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Accelerate.Hostal.Application.Controllers</name>
+    </assembly>
+    <members>
+        <member name="T:Accelerate.Hostal.Application.Controllers.BookingController">
+            <summary>
+            Controller for managing booking.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.#ctor(Microsoft.Extensions.Logging.ILogger,Accelerate.Telemetry.ITelemetryService,Accelerate.Hostal.Domain.Services.IBookingService)">
+            <summary>
+            Initialize a new instance of object.
+            </summary>
+            <param name="logger">
+            Diagnostics traces service.
+            </param>
+            <param name="telemetry">
+            Telemetry service.
+            </param>
+            <param name="booking">
+            Domain service for managing booking.
+            </param>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Create(Accelerate.Hostal.Application.Dtos.BookingDto)">
+            <summary>
+            Create a booking.
+            </summary>
+            <param name="bookingDto">
+            Booking information.
+            </param>
+            <response code="200">
+            This code was returned when the booking was created successfully.
+            </response>
+            <response code="400">
+            This code was returned when the booking has an invalid properties.
+            </response>
+            <response code="409">
+            This code was returned when the booking id already exists.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Delete(System.Guid,System.Guid)">
+            <summary>
+            Delete a booking.
+            </summary>
+            <param name="guestId">
+            Unique id of guest.
+            </param>
+            <param name="id">
+            Unique id of booking.
+            </param>
+            <response code="200">
+            This code was returned when the booking was found and was removed successfully.
+            </response>
+            <response code="400">
+            This code was returned when the booking has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the booking was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.GetAll(System.Guid)">
+            <summary>
+            Get all bookings.
+            </summary>
+            <param name="guestId">
+            Unique id of guest.
+            </param>
+            <response code="200">
+            This code was returned when the bookings was retrieved successfully.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.GetOne(System.Guid,System.Guid)">
+            <summary>
+            Get one booking.
+            </summary>
+            <param name="guestId">
+            Unique id of guest.
+            </param>
+            <param name="id">
+            Unique id of booking.
+            </param>
+            <response code="200">
+            This code was returned when the booking was retrieved successfully.
+            </response>
+            <response code="400">
+            This code was returned when the booking has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the booking was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Update(System.Guid,System.Guid,Accelerate.Hostal.Application.Dtos.BookingDto)">
+            <summary>
+            Update a booking.
+            </summary>
+            <param name="guestId">
+            Guest unique id.
+            </param>
+            <param name="id">
+            Booking unique id.
+            </param>
+            <param name="bookingDto">
+            Booking information.
+            </param>
+            <response code="200">
+            This code was returned when the booking was found and was updated successfully.
+            </response>
+            <response code="400">
+            This code was returned when the booking has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the booking was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="T:Accelerate.Hostal.Application.Controllers.Controller">
+            <summary>
+            Base controller.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.Controller.GetCorrelationId">
+            <summary>
+            Get the correlation id linked to request.
+            </summary>
+        </member>
+        <member name="T:Accelerate.Hostal.Application.Controllers.CountriesController">
+            <summary>
+            Controller for managing countries.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.#ctor(Microsoft.Extensions.Logging.ILogger,Accelerate.Telemetry.ITelemetryService,Accelerate.Hostal.Domain.Services.ICountriesService)">
+            <summary>
+            Initialize a new instance of object.
+            </summary>
+            <param name="logger">
+            Diagnostics traces service.
+            </param>
+            <param name="telemetry">
+            Telemetry service.
+            </param>
+            <param name="countries">
+            Domain service for managing countries.
+            </param>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.Create(Accelerate.Hostal.Application.Dtos.CountryDto)">
+            <summary>
+            Create a country.
+            </summary>
+            <param name="countryDto">
+            Country information.
+            </param>
+            <response code="200">
+            This code was returned when the country was created successfully.
+            </response>
+            <response code="400">
+            This code was returned when the country has an invalid properties.
+            </response>
+            <response code="409">
+            This code was returned when the country id already exists.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.Delete(System.String)">
+            <summary>
+            Delete a country.
+            </summary>
+            <param name="isoCode">
+            ISO code of country.
+            </param>
+            <response code="200">
+            This code was returned when the country was found and was removed successfully.
+            </response>
+            <response code="400">
+            This code was returned when the country has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the country was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.GetAll">
+            <summary>
+            Get all countries.
+            </summary>
+            <response code="200">
+            This code was returned when the countries was retrieved successfully.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.GetOne(System.String)">
+            <summary>
+            Get one country.
+            </summary>
+            <param name="isoCode">
+            ISO code of country.
+            </param>
+            <response code="200">
+            This code was returned when the country was retrieved successfully.
+            </response>
+            <response code="400">
+            This code was returned when the country has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the country was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.CountriesController.Update(System.String,Accelerate.Hostal.Application.Dtos.CountryDto)">
+            <summary>
+            Update a country.
+            </summary>
+            <param name="isoCode">
+            ISO code of country.
+            </param>
+            <param name="countryDto">
+            Country information.
+            </param>
+            <response code="200">
+            This code was returned when the country was found and was updated successfully.
+            </response>
+            <response code="400">
+            This code was returned when the country has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the country was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="T:Accelerate.Hostal.Application.Controllers.DocumentTypesController">
+            <summary>
+            Controller for managing document types.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.#ctor(Microsoft.Extensions.Logging.ILogger,Accelerate.Telemetry.ITelemetryService,Accelerate.Hostal.Domain.Services.IDocumentTypesService)">
+            <summary>
+            Initialize a new instance of object.
+            </summary>
+            <param name="logger">
+            Diagnostics traces service.
+            </param>
+            <param name="telemetry">
+            Telemetry service.
+            </param>
+            <param name="documentTypes">
+            Domain service for managing document types.
+            </param>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.Create(Accelerate.Hostal.Application.Dtos.DocumentTypeDto)">
+            <summary>
+            Create a document type.
+            </summary>
+            <param name="documentTypeDto">
+            Document type information.
+            </param>
+            <response code="200">
+            This code was returned when the document type was created successfully.
+            </response>
+            <response code="400">
+            This code was returned when the document type has an invalid properties.
+            </response>
+            <response code="409">
+            This code was returned when the document type id already exists.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.Delete(System.Guid)">
+            <summary>
+            Delete a document type.
+            </summary>
+            <param name="id">
+            Unique id of document type.
+            </param>
+            <response code="200">
+            This code was returned when the document type was found and was removed successfully.
+            </response>
+            <response code="400">
+            This code was returned when the document type has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the document type was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.GetAll">
+            <summary>
+            Get all document types.
+            </summary>
+            <response code="200">
+            This code was returned when the document types was retrieved successfully.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.GetOne(System.Guid)">
+            <summary>
+            Get one document type.
+            </summary>
+            <param name="id">
+            Unique id of document type.
+            </param>
+            <response code="200">
+            This code was returned when the document type was retrieved successfully.
+            </response>
+            <response code="400">
+            This code was returned when the document type has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the document type was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.DocumentTypesController.Update(System.Guid,Accelerate.Hostal.Application.Dtos.DocumentTypeDto)">
+            <summary>
+            Update a document type.
+            </summary>
+            <param name="id">
+            Unique id of document type.
+            </param>
+            <param name="documentTypeDto">
+            Application information.
+            </param>
+            <response code="200">
+            This code was returned when the document type was found and was updated successfully.
+            </response>
+            <response code="400">
+            This code was returned when the document type has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the document type was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="T:Accelerate.Hostal.Application.Controllers.GendersController">
+            <summary>
+            Controller for managing genders.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.#ctor(Microsoft.Extensions.Logging.ILogger,Accelerate.Telemetry.ITelemetryService,Accelerate.Hostal.Domain.Services.IGendersService)">
+            <summary>
+            Initialize a new instance of object.
+            </summary>
+            <param name="logger">
+            Diagnostics traces service.
+            </param>
+            <param name="telemetry">
+            Telemetry service.
+            </param>
+            <param name="genders">
+            Domain service for managing genders.
+            </param>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.Create(Accelerate.Hostal.Application.Dtos.GenderDto)">
+            <summary>
+            Create a gender.
+            </summary>
+            <param name="genderDto">
+            Gender information.
+            </param>
+            <response code="200">
+            This code was returned when the gender was created successfully.
+            </response>
+            <response code="400">
+            This code was returned when the gender has an invalid properties.
+            </response>
+            <response code="409">
+            This code was returned when the gender id already exists.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.Delete(System.Guid)">
+            <summary>
+            Delete a gender.
+            </summary>
+            <param name="id">
+            Unique id of gender.
+            </param>
+            <response code="200">
+            This code was returned when the gender was found and was removed successfully.
+            </response>
+            <response code="400">
+            This code was returned when the gender has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the gender was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.GetAll">
+            <summary>
+            Get all genders.
+            </summary>
+            <response code="200">
+            This code was returned when the genders was retrieved successfully.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.GetOne(System.Guid)">
+            <summary>
+            Get one gender.
+            </summary>
+            <param name="id">
+            Unique id of gender.
+            </param>
+            <response code="200">
+            This code was returned when the gender was retrieved successfully.
+            </response>
+            <response code="400">
+            This code was returned when the gender id is empty or cannot be converted to guid.
+            </response>
+            <response code="404">
+            This code was returned when the gender was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GendersController.Update(System.Guid,Accelerate.Hostal.Application.Dtos.GenderDto)">
+            <summary>
+            Update a gender.
+            </summary>
+            <param name="id">
+            Unique id of gender.
+            </param>
+            <param name="genderDto">
+            Genderlication information.
+            </param>
+            <response code="200">
+            This code was returned when the gender was found and was updated successfully.
+            </response>
+            <response code="400">
+            This code was returned when the gender has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the gender was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="T:Accelerate.Hostal.Application.Controllers.GuestsController">
+            <summary>
+            Controller for managing guests.
+            </summary>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.#ctor(Microsoft.Extensions.Logging.ILogger,Accelerate.Telemetry.ITelemetryService,Accelerate.Hostal.Domain.Services.IGuestsService)">
+            <summary>
+            Initialize a new instance of object.
+            </summary>
+            <param name="logger">
+            Diagnostics traces service.
+            </param>
+            <param name="telemetry">
+            Telemetry service.
+            </param>
+            <param name="guests">
+            Domain service for managing guests.
+            </param>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.Create(Accelerate.Hostal.Application.Dtos.GuestDto)">
+            <summary>
+            Create a guest.
+            </summary>
+            <param name="guestDto">
+            Guest information.
+            </param>
+            <response code="200">
+            This code was returned when the guest was created successfully.
+            </response>
+            <response code="400">
+            This code was returned when the guest has an invalid properties.
+            </response>
+            <response code="409">
+            This code was returned when the guest id already exists.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.Delete(System.Guid)">
+            <summary>
+            Delete a guest.
+            </summary>
+            <param name="id">
+            Unique id of guest.
+            </param>
+            <response code="200">
+            This code was returned when the guest was found and was removed successfully.
+            </response>
+            <response code="400">
+            This code was returned when the guest has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the guest was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.GetAll">
+            <summary>
+            Get all guests.
+            </summary>
+            <response code="200">
+            This code was returned when the guests was retrieved successfully.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.GetOne(System.Guid)">
+            <summary>
+            Get one guest.
+            </summary>
+            <param name="id">
+            Unique id of guest.
+            </param>
+            <response code="200">
+            This code was returned when the guest was retrieved successfully.
+            </response>
+            <response code="400">
+            This code was returned when the guest id is empty or cannot be converted to guid.
+            </response>
+            <response code="404">
+            This code was returned when the guest was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+        <member name="M:Accelerate.Hostal.Application.Controllers.GuestsController.Update(System.Guid,Accelerate.Hostal.Application.Dtos.GuestDto)">
+            <summary>
+            Update a guest.
+            </summary>
+            <param name="id">
+            Unique id of guest.
+            </param>
+            <param name="guestDto">
+            Application information.
+            </param>
+            <response code="200">
+            This code was returned when the guest was found and was updated successfully.
+            </response>
+            <response code="400">
+            This code was returned when the guest has an invalid properties.
+            </response>
+            <response code="404">
+            This code was returned when the guest was not found.
+            </response>
+            <response code="500">
+            This code was returned when an internal server error was thrown.
+            </response>
+        </member>
+    </members>
+</doc>
