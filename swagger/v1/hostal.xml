@@ -66,32 +66,12 @@
             This code was returned when an internal server error was thrown.
             </response>
         </member>
-        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.GetAll(System.Guid)">
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Get">
             <summary>
-            Get all bookings.
+            Get all bookings or a specific one.
             </summary>
-            <param name="guestId">
-            Unique id of guest.
-            </param>
             <response code="200">
-            This code was returned when the bookings was retrieved successfully.
-            </response>
-            <response code="500">
-            This code was returned when an internal server error was thrown.
-            </response>
-        </member>
-        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.GetOne(System.Guid,System.Guid)">
-            <summary>
-            Get one booking.
-            </summary>
-            <param name="guestId">
-            Unique id of guest.
-            </param>
-            <param name="id">
-            Unique id of booking.
-            </param>
-            <response code="200">
-            This code was returned when the booking was retrieved successfully.
+            This code was returned when the booking or bookings was retrieved successfully.
             </response>
             <response code="400">
             This code was returned when the booking has an invalid properties.
@@ -108,7 +88,7 @@
             Update a booking.
             </summary>
             <param name="guestId">
-            Guest unique id.
+            Unique id of guest.
             </param>
             <param name="id">
             Booking unique id.
