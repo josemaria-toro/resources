@@ -43,13 +43,10 @@
             This code was returned when an internal server error was thrown.
             </response>
         </member>
-        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Delete(System.Guid,System.Guid)">
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Delete(System.Guid)">
             <summary>
             Delete a booking.
             </summary>
-            <param name="guestId">
-            Unique id of guest.
-            </param>
             <param name="id">
             Unique id of booking.
             </param>
@@ -83,13 +80,10 @@
             This code was returned when an internal server error was thrown.
             </response>
         </member>
-        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Update(System.Guid,System.Guid,Accelerate.Hostal.Application.Dtos.BookingDto)">
+        <member name="M:Accelerate.Hostal.Application.Controllers.BookingController.Update(System.Guid,Accelerate.Hostal.Application.Dtos.BookingDto)">
             <summary>
             Update a booking.
             </summary>
-            <param name="guestId">
-            Unique id of guest.
-            </param>
             <param name="id">
             Booking unique id.
             </param>
